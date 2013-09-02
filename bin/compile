@@ -37,14 +37,14 @@ function tar_download() {
 }
 
 # downloading node
-echo "-----> Downloading node"
-tar_download http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz $BUILD_DIR
-mv $BUILD_DIR/node-v$NODE_VERSION-linux-x64 $BUILD_DIR/node
-chmod +x $BUILD_DIR/node/bin/*
+#echo "-----> Downloading node"
+#tar_download http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz $BUILD_DIR
+#mv $BUILD_DIR/node-v$NODE_VERSION-linux-x64 $BUILD_DIR/node
+#chmod +x $BUILD_DIR/node/bin/*
 
 #adding node to the build's $PATH
 PATH=$PATH:$BUILD_DIR/node/bin
-echo "node version $NODE_VERSION has been installed" | indent
+#echo "node version $NODE_VERSION has been installed" | indent
 
 # install dependencies with npm
 echo "-----> Installing dependencies with npm"
